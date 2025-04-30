@@ -54,7 +54,24 @@ local function loadRNGDropperTycoonScript()
     if not success then
         warn("Error loading the script: " .. result)
     else
-        print("Lone Survival script loaded successfully!")
+        print("RNG Dropper Tycoon script loaded successfully!")
+    end
+
+    -- Properly unload the UI
+    Library:Unload()
+end
+
+-- Define function separately
+local function loadMiningWorldScript()
+    local scriptUrl = "https://raw.githubusercontent.com/SPSsalty/RNG-Dropper-Tycoon/refs/heads/main/Free"
+    local success, result = pcall(function()
+        loadstring(game:HttpGet(scriptUrl))()
+    end)
+
+    if not success then
+        warn("Error loading the script: " .. result)
+    else
+        print("Mining World script loaded successfully!")
     end
 
     -- Properly unload the UI
@@ -65,7 +82,6 @@ MainLeftBox:AddLabel('')
 
 MainLeftBox:AddLabel('Free Lone Script')
 
--- ✅ Use 'Func' instead of 'Callback'
 MainLeftBox:AddButton({
     Text = 'Lone Survival',
     Func = loadLoneSurvivalScript
@@ -78,5 +94,14 @@ MainLeftBox:AddLabel('Free RNG Dropper Tycoon Script')
 MainLeftBox:AddButton({
     Text = 'RNG Dropper Tycoon',
     Func = loadRNGDropperTycoonScript
+})
+
+MainLeftBox:AddLabel('')
+
+MainLeftBox:AddLabel('Free Mining World Script')
+
+MainLeftBox:AddButton({
+    Text = 'Mining World Script',
+    Func = loadMiningWorldScript
 })
 
