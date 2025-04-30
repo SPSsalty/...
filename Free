@@ -1,0 +1,82 @@
+local repo = 'https://raw.githubusercontent.com/violin-suzutsuki/LinoriaLib/main/'
+
+local Library = loadstring(game:HttpGet(repo .. 'Library.lua'))()
+local ThemeManager = loadstring(game:HttpGet(repo .. 'addons/ThemeManager.lua'))()
+local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
+
+-- Services
+local Players = game:GetService("Players")
+local UserInputService = game:GetService("UserInputService")
+local RunService = game:GetService("RunService")
+local HttpService = game:GetService("HttpService")
+local LocalPlayer = Players.LocalPlayer
+local Camera = workspace.CurrentCamera
+
+-- Create window
+local Window = Library:CreateWindow({
+    Title = 'Auralis | Free Version',
+    Center = true, 
+    AutoShow = true,
+})
+
+-- Create Tabs
+local Tabs = {
+    Main = Window:AddTab('Main'), 
+}
+
+-- Main Tab
+local MainLeftBox = Tabs.Main:AddLeftGroupbox('Auralis Hub')
+
+-- Define function separately
+local function loadLoneSurvivalScript()
+    local scriptUrl = "https://raw.githubusercontent.com/SPSsalty/L0neScr1pt/refs/heads/main/LoneFree"
+    local success, result = pcall(function()
+        loadstring(game:HttpGet(scriptUrl))()
+    end)
+
+    if not success then
+        warn("Error loading the script: " .. result)
+    else
+        print("Lone Survival script loaded successfully!")
+    end
+
+    -- Properly unload the UI
+    Library:Unload()
+end
+
+-- Define function separately
+local function loadRNGDropperTycoonScript()
+    local scriptUrl = "https://raw.githubusercontent.com/SPSsalty/RNG-Dropper-Tycoon/refs/heads/main/Free"
+    local success, result = pcall(function()
+        loadstring(game:HttpGet(scriptUrl))()
+    end)
+
+    if not success then
+        warn("Error loading the script: " .. result)
+    else
+        print("Lone Survival script loaded successfully!")
+    end
+
+    -- Properly unload the UI
+    Library:Unload()
+end
+
+MainLeftBox:AddLabel('')
+
+MainLeftBox:AddLabel('Free Lone Script')
+
+-- ✅ Use 'Func' instead of 'Callback'
+MainLeftBox:AddButton({
+    Text = 'Lone Survival',
+    Func = loadLoneSurvivalScript
+})
+
+MainLeftBox:AddLabel('')
+
+MainLeftBox:AddLabel('Free RNG Dropper Tycoon Script')
+
+MainLeftBox:AddButton({
+    Text = 'RNG Dropper Tycoon',
+    Func = loadRNGDropperTycoonScript
+})
+
