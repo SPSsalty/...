@@ -29,7 +29,7 @@ local MainLeftBox = Tabs.Main:AddLeftGroupbox('Auralis Hub')
 
 -- Define function separately
 local function loadLoneSurvivalScript()
-    local scriptUrl = "https://raw.githubusercontent.com/SPSsalty/L0neScr1pt/refs/heads/main/LoneFree"
+    local scriptUrl = "https://raw.githubusercontent.com/SPSsalty/..../refs/heads/main/Free"
     local success, result = pcall(function()
         loadstring(game:HttpGet(scriptUrl))()
     end)
