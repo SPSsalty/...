@@ -46,7 +46,7 @@ end
 
 -- Define function separately
 local function loadRNGDropperTycoonScript()
-    local scriptUrl = "https://raw.githubusercontent.com/SPSsalty/RNG-Dropper-Tycoon/refs/heads/main/Free"
+    local scriptUrl = "https://raw.githubusercontent.com/SPSsalty/..0../refs/heads/main/Free"
     local success, result = pcall(function()
         loadstring(game:HttpGet(scriptUrl))()
     end)
@@ -63,7 +63,7 @@ end
 
 -- Define function separately
 local function loadMiningWorldScript()
-    local scriptUrl = "https://raw.githubusercontent.com/SPSsalty/RNG-Dropper-Tycoon/refs/heads/main/Free"
+    local scriptUrl = "https://raw.githubusercontent.com/SPSsalty/..1../refs/heads/main/Free"
     local success, result = pcall(function()
         loadstring(game:HttpGet(scriptUrl))()
     end)
