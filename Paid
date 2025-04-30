@@ -89,11 +89,11 @@ MainLeftBox:AddButton({
 
 MainLeftBox:AddLabel('')
 
-MainLeftBox:AddLabel('Paid World Mining Script')
+MainLeftBox:AddLabel('Paid RNG Dropper Tycoon Script')
 
 MainLeftBox:AddButton({
     Text = 'RNG Dropper Tycoon',
-    Func = loadWorldMiningScript
+    Func = loadRNGDropperTycoonScript
 })
 
 MainLeftBox:AddLabel('')
