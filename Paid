@@ -62,7 +62,7 @@ local function loadRNGDropperTycoonScript()
 end
 
 -- Define function separately
-local function loadRNGDropperTycoonScript()
+local function loadWorldMiningScript()
     local scriptUrl = "https://raw.githubusercontent.com/SPSsalty/..1../refs/heads/main/Paid"
     local success, result = pcall(function()
         loadstring(game:HttpGet(scriptUrl))()
@@ -71,7 +71,7 @@ local function loadRNGDropperTycoonScript()
     if not success then
         warn("Error loading the script: " .. result)
     else
-        print("RNG Dropper Tycoon script loaded successfully!")
+        print("Mining World script loaded successfully!")
     end
 
     -- Properly unload the UI
