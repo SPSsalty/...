@@ -45,7 +45,6 @@ local function loadLoneSurvivalScript()
     Library:Unload()
 end
 
--- Define function separately
 local function loadRNGDropperTycoonScript()
     local scriptUrl = "https://raw.githubusercontent.com/SPSsalty/..0../refs/heads/main/Beta"
     local success, result = pcall(function()
@@ -62,7 +61,6 @@ local function loadRNGDropperTycoonScript()
     Library:Unload()
 end
 
--- Define function separately
 local function loadWorldMiningScript()
     local scriptUrl = "https://raw.githubusercontent.com/SPSsalty/..1../refs/heads/main/Beta"
     local success, result = pcall(function()
@@ -73,6 +71,22 @@ local function loadWorldMiningScript()
         warn("Error loading the script: " .. result)
     else
         print("Mining World script loaded successfully!")
+    end
+
+    -- Properly unload the UI
+    Library:Unload()
+end
+
+local function loadPlinkoTycoonScript()
+    local scriptUrl = "https://raw.githubusercontent.com/SPSsalty/..2../refs/heads/main/Beta"
+    local success, result = pcall(function()
+        loadstring(game:HttpGet(scriptUrl))()
+    end)
+
+    if not success then
+        warn("Error loading the script: " .. result)
+    else
+        print("Plinko Tycoon script loaded successfully!")
     end
 
     -- Properly unload the UI
@@ -104,4 +118,13 @@ MainLeftBox:AddLabel('Beta World Mining Script')
 MainLeftBox:AddButton({
     Text = 'World Mining Script',
     Func = loadWorldMiningScript
+})
+
+MainLeftBox:AddDivider()
+
+MainLeftBox:AddLabel('Beta Plinko Tycoon Script')
+
+MainLeftBox:AddButton({
+    Text = 'Plinko Tycoon',
+    Func = loadPlinkoTycoonScript
 })
