@@ -80,7 +80,7 @@ end
 
 MainLeftBox:AddLabel('')
 
-MainLeftBox:AddLabel('Paid Lone Script')
+MainLeftBox:AddLabel('Beta Lone Script')
 
 MainLeftBox:AddButton({
     Text = 'Lone Survival',
