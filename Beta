@@ -78,7 +78,7 @@ local function loadWorldMiningScript()
     Library:Unload()
 end
 
-MainLeftBox:AddLabel('')
+MainLeftBox:AddDivider()
 
 MainLeftBox:AddLabel('Beta Lone Script')
 
@@ -87,7 +87,7 @@ MainLeftBox:AddButton({
     Func = loadLoneSurvivalScript
 })
 
-MainLeftBox:AddLabel('')
+MainLeftBox:AddDivider()
 
 MainLeftBox:AddLabel('Beta RNG Dropper Tycoon Script')
 
@@ -96,7 +96,7 @@ MainLeftBox:AddButton({
     Func = loadRNGDropperTycoonScript
 })
 
-MainLeftBox:AddLabel('')
+MainLeftBox:AddDivider()
 
 MainLeftBox:AddLabel('Beta World Mining Script')
 
