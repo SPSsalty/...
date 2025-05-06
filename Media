@@ -284,12 +284,3 @@ FreeLeftBox:AddButton({
     Text = 'World Mining Script',
     Func = loadFreeWorldMiningScript
 })
-
-FreeLeftBox:AddDivider()
-
-FreeLeftBox:AddLabel('Free Plinko Tycoon Script')
-
-FreeLeftBox:AddButton({
-    Text = 'Plinko Tycoon',
-    Func = loadFreePlinkoTycoonScript
-})
