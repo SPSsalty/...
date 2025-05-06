@@ -1,0 +1,132 @@
+local repo = 'https://raw.githubusercontent.com/violin-suzutsuki/LinoriaLib/main/'
+
+local Library = loadstring(game:HttpGet(repo .. 'Library.lua'))()
+local ThemeManager = loadstring(game:HttpGet(repo .. 'addons/ThemeManager.lua'))()
+local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
+
+-- Services
+local Players = game:GetService("Players")
+local UserInputService = game:GetService("UserInputService")
+local RunService = game:GetService("RunService")
+local HttpService = game:GetService("HttpService")
+local LocalPlayer = Players.LocalPlayer
+local Camera = workspace.CurrentCamera
+
+-- Create window
+local Window = Library:CreateWindow({
+    Title = 'Auralis | Beta Version',
+    Center = true, 
+    AutoShow = true,
+})
+
+-- Create Tabs
+local Tabs = {
+    Free = Window:AddTab ('Free')
+    Premium = Window:AddTab('Premium')
+    Beta = Window:AddTab('Beta'), 
+}
+
+-- Main Tab
+local BetaLeftBox = Tabs.Beta:AddLeftGroupbox('Auralis Hub')
+BetaLeftBox:AddLabel('Beta Verison: 1.0.0')
+
+-- Define function separately
+local function loadLoneSurvivalScript()
+    local scriptUrl = "https://raw.githubusercontent.com/SPSsalty/..../refs/heads/main/Beta"
+    local success, result = pcall(function()
+        loadstring(game:HttpGet(scriptUrl))()
+    end)
+
+    if not success then
+        warn("Error loading the script: " .. result)
+    else
+        print("Lone Survival script loaded successfully!")
+    end
+
+    -- Properly unload the UI
+    Library:Unload()
+end
+
+local function loadRNGDropperTycoonScript()
+    local scriptUrl = "https://raw.githubusercontent.com/SPSsalty/..0../refs/heads/main/Beta"
+    local success, result = pcall(function()
+        loadstring(game:HttpGet(scriptUrl))()
+    end)
+
+    if not success then
+        warn("Error loading the script: " .. result)
+    else
+        print("RNG Dropper Tycoon script loaded successfully!")
+    end
+
+    -- Properly unload the UI
+    Library:Unload()
+end
+
+local function loadWorldMiningScript()
+    local scriptUrl = "https://raw.githubusercontent.com/SPSsalty/..1../refs/heads/main/Beta"
+    local success, result = pcall(function()
+        loadstring(game:HttpGet(scriptUrl))()
+    end)
+
+    if not success then
+        warn("Error loading the script: " .. result)
+    else
+        print("Mining World script loaded successfully!")
+    end
+
+    -- Properly unload the UI
+    Library:Unload()
+end
+
+local function loadPlinkoTycoonScript()
+    local scriptUrl = "https://raw.githubusercontent.com/SPSsalty/..2../refs/heads/main/Beta"
+    local success, result = pcall(function()
+        loadstring(game:HttpGet(scriptUrl))()
+    end)
+
+    if not success then
+        warn("Error loading the script: " .. result)
+    else
+        print("Plinko Tycoon script loaded successfully!")
+    end
+
+    -- Properly unload the UI
+    Library:Unload()
+end
+
+BetaLeftBox:AddDivider()
+
+BetaLeftBox:AddLabel('Beta Lone Script')
+
+BetaLeftBox:AddButton({
+    Text = 'Lone Survival',
+    Func = loadLoneSurvivalScript
+})
+
+BetaLeftBox:AddDivider()
+
+BetaLeftBox:AddLabel('Beta RNG Dropper Tycoon Script')
+
+BetaLeftBox:AddButton({
+    Text = 'RNG Dropper Tycoon',
+    Func = loadRNGDropperTycoonScript
+})
+
+BetaLeftBox:AddDivider()
+
+BetaLeftBox:AddLabel('Beta World Mining Script')
+
+BetaLeftBox:AddButton({
+    Text = 'World Mining Script',
+    Func = loadWorldMiningScript
+})
+
+BetaLeftBox:AddDivider()
+
+BetaLeftBox:AddLabel('Beta Plinko Tycoon Script')
+
+BetaLeftBox:AddButton({
+    Text = 'Plinko Tycoon',
+    Func = loadPlinkoTycoonScript
+})
