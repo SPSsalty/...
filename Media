@@ -99,6 +99,102 @@ local function loadBetaPlinkoTycoonScript()
     Library:Unload()
 end
 
+local function loadPremiumLoneSurvivalScript()
+    local scriptUrl = "https://raw.githubusercontent.com/SPSsalty/..../refs/heads/main/Paid"
+    local success, result = pcall(function()
+        loadstring(game:HttpGet(scriptUrl))()
+    end)
+
+    if not success then
+        warn("Error loading the script: " .. result)
+    else
+        print("Lone Survival script loaded successfully!")
+    end
+
+    -- Properly unload the UI
+    Library:Unload()
+end
+
+local function loadPremiumRNGDropperTycoonScript()
+    local scriptUrl = "https://raw.githubusercontent.com/SPSsalty/..0../refs/heads/main/Paid"
+    local success, result = pcall(function()
+        loadstring(game:HttpGet(scriptUrl))()
+    end)
+
+    if not success then
+        warn("Error loading the script: " .. result)
+    else
+        print("RNG Dropper Tycoon script loaded successfully!")
+    end
+
+    -- Properly unload the UI
+    Library:Unload()
+end
+
+local function loadPremiumWorldMiningScript()
+    local scriptUrl = "https://raw.githubusercontent.com/SPSsalty/..1../refs/heads/main/Paid"
+    local success, result = pcall(function()
+        loadstring(game:HttpGet(scriptUrl))()
+    end)
+
+    if not success then
+        warn("Error loading the script: " .. result)
+    else
+        print("Mining World script loaded successfully!")
+    end
+
+    -- Properly unload the UI
+    Library:Unload()
+end
+
+local function loadFreeLoneSurvivalScript()
+    local scriptUrl = "https://raw.githubusercontent.com/SPSsalty/..../refs/heads/main/Free"
+    local success, result = pcall(function()
+        loadstring(game:HttpGet(scriptUrl))()
+    end)
+
+    if not success then
+        warn("Error loading the script: " .. result)
+    else
+        print("Lone Survival script loaded successfully!")
+    end
+
+    -- Properly unload the UI
+    Library:Unload()
+end
+
+local function loadFreeRNGDropperTycoonScript()
+    local scriptUrl = "https://raw.githubusercontent.com/SPSsalty/..0../refs/heads/main/Free"
+    local success, result = pcall(function()
+        loadstring(game:HttpGet(scriptUrl))()
+    end)
+
+    if not success then
+        warn("Error loading the script: " .. result)
+    else
+        print("RNG Dropper Tycoon script loaded successfully!")
+    end
+
+    -- Properly unload the UI
+    Library:Unload()
+end
+
+local function loadFreeWorldMiningScript()
+    local scriptUrl = "https://raw.githubusercontent.com/SPSsalty/..1../refs/heads/main/Free"
+    local success, result = pcall(function()
+        loadstring(game:HttpGet(scriptUrl))()
+    end)
+
+    if not success then
+        warn("Error loading the script: " .. result)
+    else
+        print("Mining World script loaded successfully!")
+    end
+
+    -- Properly unload the UI
+    Library:Unload()
+end
+
 BetaLeftBox:AddDivider()
 
 BetaLeftBox:AddLabel('Beta Lone Script')
@@ -133,4 +229,67 @@ BetaLeftBox:AddLabel('Beta Plinko Tycoon Script')
 BetaLeftBox:AddButton({
     Text = 'Plinko Tycoon',
     Func = loadBetaPlinkoTycoonScript
+})
+
+PremiumLeftBox:AddDivider()
+
+PremiumLeftBox:AddLabel('Premium Lone Script')
+
+PremiumLeftBox:AddButton({
+    Text = 'Lone Survival',
+    Func = loadPremiumLoneSurvivalScript
+})
+
+PremiumLeftBox:AddDivider()
+
+PremiumLeftBox:AddLabel('Premium RNG Dropper Tycoon Script')
+
+PremiumLeftBox:AddButton({
+    Text = 'RNG Dropper Tycoon',
+    Func = loadPremiumRNGDropperTycoonScript
+})
+
+PremiumLeftBox:AddDivider()
+
+PremiumLeftBox:AddLabel('Premium World Mining Script')
+
+PremiumLeftBox:AddButton({
+    Text = 'World Mining Script',
+    Func = loadPremiumWorldMiningScript
+})
+
+FreeLeftBox:AddDivider()
+
+FreeLeftBox:AddLabel('Free Lone Script')
+
+FreeLeftBox:AddButton({
+    Text = 'Lone Survival',
+    Func = loadFreeLoneSurvivalScript
+})
+
+FreeLeftBox:AddDivider()
+
+FreeLeftBox:AddLabel('Free RNG Dropper Tycoon Script')
+
+FreeLeftBox:AddButton({
+    Text = 'RNG Dropper Tycoon',
+    Func = loadFreeRNGDropperTycoonScript
+})
+
+FreeLeftBox:AddDivider()
+
+FreeLeftBox:AddLabel('Free World Mining Script')
+
+FreeLeftBox:AddButton({
+    Text = 'World Mining Script',
+    Func = loadFreeWorldMiningScript
+})
+
+FreeLeftBox:AddDivider()
+
+FreeLeftBox:AddLabel('Free Plinko Tycoon Script')
+
+FreeLeftBox:AddButton({
+    Text = 'Plinko Tycoon',
+    Func = loadFreePlinkoTycoonScript
 })
