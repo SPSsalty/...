@@ -31,7 +31,7 @@ local BetaLeftBox = Tabs.Beta:AddLeftGroupbox('Auralis Hub')
 BetaLeftBox:AddLabel('Beta Verison: 1.0.0')
 
 -- Define function separately
-local function loadLoneSurvivalScript()
+local function loadBetaLoneSurvivalScript()
     local scriptUrl = "https://raw.githubusercontent.com/SPSsalty/..../refs/heads/main/Beta"
     local success, result = pcall(function()
         loadstring(game:HttpGet(scriptUrl))()
@@ -47,7 +47,7 @@ local function loadLoneSurvivalScript()
     Library:Unload()
 end
 
-local function loadRNGDropperTycoonScript()
+local function loadBetaRNGDropperTycoonScript()
     local scriptUrl = "https://raw.githubusercontent.com/SPSsalty/..0../refs/heads/main/Beta"
     local success, result = pcall(function()
         loadstring(game:HttpGet(scriptUrl))()
@@ -63,7 +63,7 @@ local function loadRNGDropperTycoonScript()
     Library:Unload()
 end
 
-local function loadWorldMiningScript()
+local function loadBetaWorldMiningScript()
     local scriptUrl = "https://raw.githubusercontent.com/SPSsalty/..1../refs/heads/main/Beta"
     local success, result = pcall(function()
         loadstring(game:HttpGet(scriptUrl))()
@@ -79,7 +79,7 @@ local function loadWorldMiningScript()
     Library:Unload()
 end
 
-local function loadPlinkoTycoonScript()
+local function loadBetaPlinkoTycoonScript()
     local scriptUrl = "https://raw.githubusercontent.com/SPSsalty/..2../refs/heads/main/Beta"
     local success, result = pcall(function()
         loadstring(game:HttpGet(scriptUrl))()
@@ -101,7 +101,7 @@ BetaLeftBox:AddLabel('Beta Lone Script')
 
 BetaLeftBox:AddButton({
     Text = 'Lone Survival',
-    Func = loadLoneSurvivalScript
+    Func = loadBetaLoneSurvivalScript
 })
 
 BetaLeftBox:AddDivider()
@@ -110,7 +110,7 @@ BetaLeftBox:AddLabel('Beta RNG Dropper Tycoon Script')
 
 BetaLeftBox:AddButton({
     Text = 'RNG Dropper Tycoon',
-    Func = loadRNGDropperTycoonScript
+    Func = loadBetaRNGDropperTycoonScript
 })
 
 BetaLeftBox:AddDivider()
@@ -119,7 +119,7 @@ BetaLeftBox:AddLabel('Beta World Mining Script')
 
 BetaLeftBox:AddButton({
     Text = 'World Mining Script',
-    Func = loadWorldMiningScript
+    Func = loadBetaWorldMiningScript
 })
 
 BetaLeftBox:AddDivider()
@@ -128,5 +128,5 @@ BetaLeftBox:AddLabel('Beta Plinko Tycoon Script')
 
 BetaLeftBox:AddButton({
     Text = 'Plinko Tycoon',
-    Func = loadPlinkoTycoonScript
+    Func = loadBetaPlinkoTycoonScript
 })
