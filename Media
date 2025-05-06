@@ -21,8 +21,8 @@ local Window = Library:CreateWindow({
 
 -- Create Tabs
 local Tabs = {
-    Free = Window:AddTab ('Free')
-    Premium = Window:AddTab('Premium')
+    Free = Window:AddTab ('Free'),
+    Premium = Window:AddTab('Premium'),
     Beta = Window:AddTab('Beta'), 
 }
 
