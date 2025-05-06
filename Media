@@ -29,9 +29,9 @@ local Tabs = {
 -- Main Tab
 local BetaLeftBox = Tabs.Beta:AddLeftGroupbox('Auralis Hub')
 BetaLeftBox:AddLabel('Beta Verison: 1.0.0')
-local PremiumLeftBox = Tabs.Beta:AddLeftGroupbox('Auralis Hub')
+local PremiumLeftBox = Tabs.Premium:AddLeftGroupbox('Auralis Hub')
 PremiumLeftBox:AddLabel('Premium Verison: 1.0.0')
-local FreeLeftBox = Tabs.Beta:AddLeftGroupbox('Auralis Hub')
+local FreeLeftBox = Tabs.Free:AddLeftGroupbox('Auralis Hub')
 FreeLeftBox:AddLabel('Free Verison: 1.0.0')
 
 -- Define function separately
